@@ -1,24 +1,29 @@
-import logo from './logo.svg';
+import { Desktop, Tablet, Mobile } from './hooks/MediaQuery';
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <div>
+        <Desktop>
+          <div className="desktop__container">
+            <h1>PC입니다.</h1>
+          </div>
+        </Desktop>
+
+        <Tablet>
+          <div className="tablet__container">
+            <h1>타블렛 입니다...</h1>
+          </div>
+        </Tablet>
+
+        <Mobile>
+          <div className="mobile__container">
+            <h1>모바일입니다.</h1>
+          </div>
+        </Mobile>
+      </div>
+    </>
   );
 }
 
